@@ -27,7 +27,7 @@ Vscode sshfs 환경설정에서 settings.json 파일을 수정한다.
 
 
 ## 프로젝트 흐름도
-![캡처](D:\Image 1.png)
+![텍스트](D:\Image 1.png)
 ```
 EC2_1 UI (FE:html +javascript or vue   BE: node.js+express)
 Pub(EC2_2에게 on/off 명령을 내림)
