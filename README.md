@@ -50,5 +50,5 @@ pub(EC2_3에게 날씨정보를 물어봄)
 sub(EC2_3에게 날씨정보를 받음)
 
 EC2_5 MQTT(MQTT or RabbitMQ) -> MQTT 사용
-Broker  
+Broker 
 ```
