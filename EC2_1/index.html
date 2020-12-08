@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <title>Test Web Site</title>
+</head>
+
+<body>
+    <h1>philips_hue (ON/OFF)</h1>
+
+    <form action="/on" method="post">
+      <input type="submit" class="button" value="ON">
+    </form>
+
+    <form action="/off" method="post">
+      <input type="submit" class="button" value="OFF">
+    </form>
+    <br><br><br>
+    <h1>온도 정보 조회</h1>
+    <form action="/weather" method="post">
+      <input type="submit" class="button" value="현재온도">
+    </form>
+    <h3>
+      <span>현재날짜: </span>
+      <span id="date">0</span> 
+      <br>
+      <span>기준시간: </span>
+      <span id="hm">0</span> 
+      <br>
+      <span>현재온도: </span>
+      <span id="tem">0</span> 
+      <span>ºC</span>
+      <br>
+      <span>날씨상태: </span>
+      <span id="sky">0</span> 
+      <br>
+      <span>강수확률: </span>
+      <span id="pop">0</span> 
+      <span>%</span>
+      <br>
+      <span>습도: </span>
+      <span id="reh">0</span> 
+      <span>%</span>
+    </h3>
+  </body>
+</html>
+<script>
+  //웹소켓
+  var ws = new WebSocket("ws://13.209.48.144:8000");
+
+  // 서버로 부터 메시지를 수신한다
+  ws.onmessage = function (event) {
+    var st = event.data.split(',');
+    document.getElementById("tem").innerHTML=st[0];
+    document.getElementById("sky").innerHTML=st[1];
+    document.getElementById("pop").innerHTML=st[2];
+    document.getElementById("reh").innerHTML=st[3];
+    document.getElementById("date").innerHTML=st[4];
+    document.getElementById("hm").innerHTML=st[5];
+  }
+</script>
+
+
+<style>
+  .button {
+  
+    background-color: gray;
+  
+    border: none;
+  
+    color: white;
+  
+    padding: 15px 30px;
+  
+    text-align: center;
+  
+    text-decoration: none;
+  
+    display: inline-block;
+  
+    font-size: 16px;
+  
+    margin: 4px 2px;
+  
+    cursor: pointer;
+  
+  }
+</style>

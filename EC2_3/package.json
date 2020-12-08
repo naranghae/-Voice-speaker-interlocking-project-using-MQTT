@@ -1,0 +1,26 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "date-utils": "^1.2.21",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mqtt": "^3.0.0",
+    "pug": "^2.0.4",
+    "request": "^2.88.2",
+    "touch": "^3.1.0",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "mqtt": "^3.0.0"
+  }
+}
