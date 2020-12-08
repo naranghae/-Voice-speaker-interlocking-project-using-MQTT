@@ -27,7 +27,7 @@ if(hm>=1700 && hm<2000) hm=1700;
 if(hm>=2300 && hm<=2400 || hm>=0 && hm<200) hm=2300;
 console.log(hm);
 var url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService/getVilageFcst';
-var queryParams = '?' + encodeURIComponent('ServiceKey') + '=iP8yA3m4LgQoUV2yy%2FjVSYpxOHkdJY0M7z8sORq5iJTH9VYzkUhsSLaxqUtRKMhiloq8zvnYOvMeezGGLlfTyA%3D%3D'; /* Service Key*/
+var queryParams = '?' + encodeURIComponent('ServiceKey') + '=Service Key'; /* Service Key*/
 queryParams += '&' + encodeURIComponent('ServiceKey') + '=' + encodeURIComponent('-'); /* 공공데이터포털에서 받은 인증키 */
 queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /* 페이지번호 */
 queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /* 한 페이지 결과 수 */
