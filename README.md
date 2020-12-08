@@ -27,7 +27,7 @@ Vscode sshfs 환경설정에서 settings.json 파일을 수정한다.
 
 
 ## 프로젝트 흐름도
-![Image 1](./image/Image 1.jpg)
+![Image_1](./image/Image_1.jpg)
 ```
 EC2_1 UI (FE:html +javascript or vue   BE: node.js+express)
 Pub(EC2_2에게 on/off 명령을 내림)
@@ -52,3 +52,13 @@ sub(EC2_3에게 날씨정보를 받음)
 EC2_5 MQTT(MQTT or RabbitMQ) -> MQTT 사용
 Broker 
 ```
+
+## instance가 해야하는 것
+# MQTT를 활용하기 위해 각 인스턴스에 아래와 같이 깔아준다.
+1. 프로젝트 생성
+  > npm init
+2. MQTT 라이브러리 설치
+  > npm instal mqtt -save
+ 
+# 인스턴스 마다 보안그룹을 걸어준다.
+인바운드 규칙에 포트범위를 지정해두어 오고 갈 수 있는 길을 열어야 하기 때문.
